@@ -12,7 +12,7 @@ export class AppComponent {
   champs = [
     {
       name: 'Azir',
-      dmg: 54.8,
+      dmg: 548,
       def: 22.04,
       speed: 335,
       price: 2500,
@@ -20,7 +20,7 @@ export class AppComponent {
     },
     {
       name: 'Diana',
-      dmg: 56.04,
+      dmg: 473,
       def: 34.6,
       speed: 345,
       price: 3100,
@@ -28,7 +28,7 @@ export class AppComponent {
     },
     {
       name: 'Gnar',
-      dmg: 62,
+      dmg: 620,
       def: 34.5,
       speed: 325,
       price: 10000,

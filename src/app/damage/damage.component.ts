@@ -6,8 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./damage.component.css']
 })
 export class DamageComponent implements OnInit {
-  @Input() champDmg: any;
-  constructor() { }
+  @Input() dmg: number;
+  constructor() {
+    this.dmg = 0;
+  }
 
   ngOnInit(): void {
   }

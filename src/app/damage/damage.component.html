@@ -1,1 +1,2 @@
-<span class="color">{{champDmg}}</span>
+<span *ngIf="dmg>500" class="color-red">{{dmg}}</span>
+<span *ngIf="dmg<500" class="color-yellow">{{dmg}}</span>

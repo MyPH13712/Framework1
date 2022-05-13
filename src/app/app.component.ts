@@ -15,7 +15,7 @@ export class AppComponent {
       dmg: 54.8,
       def: 22.04,
       speed: 335,
-      price: 10000,
+      price: 2500,
       avatar: 'https://lienminh.garena.vn/images/icons/Azir.png',
     },
     {
@@ -23,7 +23,7 @@ export class AppComponent {
       dmg: 56.04,
       def: 34.6,
       speed: 345,
-      price: 10000,
+      price: 3100,
       avatar: 'https://lienminh.garena.vn/images/icons/Diana.png',
     },
     {

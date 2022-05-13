@@ -6,8 +6,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./price.component.css']
 })
 export class PriceComponent implements OnInit {
-  @Input() champPrice: any
-  constructor() { }
+  @Input() price: number;
+  @Input() src: string;
+  constructor() {
+    this.price = 0;
+    this.src = '';
+  }
 
   ngOnInit(): void {
   }

@@ -20,10 +20,11 @@
             <td>{{champ.def}}</td>
             <td>{{champ.speed}}</td>
             <td>
-                <app-price [champPrice]="champ.price"></app-price>
+                {{champ.price}}
             </td>
             <td>
-                <img [src]="champ.avatar" [alt]="champ.name" height="100">
+                <app-price [price]="champ.price" [src]="champ.avatar"></app-price>
+                <!-- <img [src]="champ.avatar" [alt]="champ.name" height="100"> -->
             </td>
         </tr>
     </tbody>

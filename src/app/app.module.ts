@@ -13,6 +13,7 @@ import { IdentityComponent } from './identity/identity.component';
 import { DamageComponent } from './damage/damage.component';
 import { PriceComponent } from './price/price.component';
 import { FormComponent } from './form/form.component';
+import { ShowValidateComponent } from './components/show-validate/show-validate.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormComponent } from './form/form.component';
     IdentityComponent,
     DamageComponent,
     PriceComponent,
-    FormComponent
+    FormComponent,
+    ShowValidateComponent
   ],
   imports: [
     BrowserModule,

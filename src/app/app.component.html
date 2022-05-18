@@ -1,5 +1,36 @@
 <div class="container">
   <div>
+    <p>su kien</p>
+    <button class="btn btn-primary" (click)="onClickBtn()"> {{showStatus ? 'Ẩn' : 'Hiện'}} bảng</button>
+  </div>
+  <div>
+    <label for="input">Name</label>
+    <input type="text" id="input" (input)="onInput($event, 'name')" [value]="inputValue.name">
+  </div>
+  <div>
+    <label for="input">Damage</label>
+    <input type="text" id="input" (input)="onInput($event,'dmg')" [value]="inputValue.dmg">
+  </div>
+  <div>
+    <label for="input">Defense</label>
+    <input type="text" id="input" (input)="onInput($event,'def')" [value]="inputValue.def">
+  </div>
+  <div>
+    <label for="input">Speed</label>
+    <input type="text" id="input" (input)="onInput($event,'speed')" [value]="inputValue.speed">
+  </div>
+  <div>
+    <label for="input">Price</label>
+    <input type="text" id="input" (input)="onInput($event,'price')" [value]="inputValue.price">
+  </div>
+  <div>
+    <label for="input">Avatar</label>
+    <input type="text" id="input" (input)="onInput($event,'avatar')" [value]="inputValue.avatar">
+  </div>
+  <div>
+    <button class="btn btn-success" (click)="onSubmit()"> Submit</button>
+  </div>
+  <div>
     Ten SV: <app-name [name]="name"></app-name>
   </div>
   <div>
@@ -8,5 +39,6 @@
 
   <h2>LOL</h2>
   <div>
-    <app-table [champions]="champs"></app-table>
+    <!-- <app-table [champions]="champs" class="{{showStatus ? 'db' : 'dn'}}"></app-table> -->
+    <app-table [champions]="champs" *ngIf="showStatus"></app-table>
   </div>

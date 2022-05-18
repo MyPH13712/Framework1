@@ -36,4 +36,43 @@ export class AppComponent {
     }
 
   ];
+
+  //su kien
+  showStatus = true;
+  onClickBtn() {
+    console.log("Btn clicked");
+    this.showStatus = !this.showStatus;
+  }
+
+
+  inputValue = {
+    name: '',
+    dmg: '',
+    def: '',
+    speed: '',
+    price: '',
+    avatar: ''
+  }
+  onInput(event: any, key: 'name' | 'dmg' | 'def' | 'speed' | 'price' | 'avatar') {
+    this.inputValue[key] = event.target.value;
+  }
+
+  onSubmit() {
+    console.log('Giá trị obj', this.inputValue);
+    this.champs.push({
+      ...this.inputValue,
+      dmg: +this.inputValue.dmg,
+      def: +this.inputValue.def,
+      speed: +this.inputValue.speed,
+      price: +this.inputValue.price,
+    });
+    this.inputValue = {
+      name: '',
+      dmg: '',
+      def: '',
+      speed: '',
+      price: '',
+      avatar: ''
+    }
+  }
 }

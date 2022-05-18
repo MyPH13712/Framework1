@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -10,6 +12,7 @@ import { NameComponent } from './name/name.component';
 import { IdentityComponent } from './identity/identity.component';
 import { DamageComponent } from './damage/damage.component';
 import { PriceComponent } from './price/price.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,14 @@ import { PriceComponent } from './price/price.component';
     NameComponent,
     IdentityComponent,
     DamageComponent,
-    PriceComponent
+    PriceComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

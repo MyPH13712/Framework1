@@ -7,9 +7,9 @@
 <span *ngIf="(field.dirty || field.touched) && field.errors?.['max']" class="text-danger">
     {{key}} max {{field.errors?.['max'].requiredLenght}}
 </span>
-<span *ngIf="(field.dirty || field.touched) && field.errors?.['minLength']" class="text-danger">
-    {{key}} min {{field.errors?.['minLength'].requiredLenght}}
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['minlength']" class="text-danger">
+    {{key}} min {{field.errors?.['minlength'].requiredLenght}}
 </span>
-<span *ngIf="(field.dirty || field.touched) && field.errors?.['maxLength']" class="text-danger">
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['maxlength']" class="text-danger">
     {{key}} max 32
 </span>

@@ -2,7 +2,7 @@
 <form action="" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
     <div class="form-group">
         <label for="">Name user</label>
-        <input type="text" class="form-control" name="name" ngModel required minLength="6" maxLength="32" #name="ngModel">
+        <input type="text" class="form-control" name="name" ngModel required minlength="6" maxlength="32" #name="ngModel">
        <span>{{name.errors | json}}</span>
         <app-show-validate [field]="name" key="name"></app-show-validate>
     </div>

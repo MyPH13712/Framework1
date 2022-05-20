@@ -2,13 +2,13 @@
     {{key}} required
 </span>
 <span *ngIf="(field.dirty || field.touched) && field.errors?.['min']" class="text-danger">
-    {{key}} min {{field.errors?.['min'].requiredLenght}}
+    {{key}} min {{field.errors?.['min'].min}}
 </span>
 <span *ngIf="(field.dirty || field.touched) && field.errors?.['max']" class="text-danger">
-    {{key}} max {{field.errors?.['max'].requiredLenght}}
+    {{key}} max {{field.errors?.['max'].max}}
 </span>
 <span *ngIf="(field.dirty || field.touched) && field.errors?.['minlength']" class="text-danger">
-    {{key}} min {{field.errors?.['minlength'].requiredLenght}}
+    {{key}} min {{field.errors?.['minlength'].requiredLength}}
 </span>
 <span *ngIf="(field.dirty || field.touched) && field.errors?.['maxlength']" class="text-danger">
     {{key}} max 32

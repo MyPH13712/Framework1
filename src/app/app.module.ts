@@ -14,6 +14,8 @@ import { DamageComponent } from './damage/damage.component';
 import { PriceComponent } from './price/price.component';
 import { FormComponent } from './form/form.component';
 import { ShowValidateComponent } from './components/show-validate/show-validate.component';
+import { UserComponent } from './user/user.component';
+import { ListComponent } from './user/list/list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ShowValidateComponent } from './components/show-validate/show-validate.
     DamageComponent,
     PriceComponent,
     FormComponent,
-    ShowValidateComponent
+    ShowValidateComponent,
+    UserComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

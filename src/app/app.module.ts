@@ -16,6 +16,7 @@ import { FormComponent } from './form/form.component';
 import { ShowValidateComponent } from './components/show-validate/show-validate.component';
 import { UserComponent } from './user/user.component';
 import { ListComponent } from './user/list/list.component';
+import { UserFormComponent } from './user/form/form.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ListComponent } from './user/list/list.component';
     FormComponent,
     ShowValidateComponent,
     UserComponent,
-    ListComponent
+    ListComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,

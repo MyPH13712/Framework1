@@ -1,1 +1,27 @@
-<p>list works!</p>
+<div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>SDT</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.sdt}}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="onEdit(user.id)">Update</button>
+                    <button class="btn btn-danger">Del</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

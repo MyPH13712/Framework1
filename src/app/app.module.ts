@@ -16,7 +16,10 @@ import { FormComponent } from './form/form.component';
 import { ShowValidateComponent } from './components/show-validate/show-validate.component';
 import { UserComponent } from './user/user.component';
 import { ListComponent } from './user/list/list.component';
-import { UserFormComponent } from './user/form/form.component'
+import { UserFormComponent } from './user/form/form.component';
+import { ProductClientComponent } from './product-client/product-client.component';
+import { AboutClientComponent } from './about-client/about-client.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { UserFormComponent } from './user/form/form.component'
     ShowValidateComponent,
     UserComponent,
     ListComponent,
-    UserFormComponent
+    UserFormComponent,
+    ProductClientComponent,
+    AboutClientComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

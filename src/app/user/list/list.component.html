@@ -19,7 +19,7 @@
                 <td>{{user.sdt}}</td>
                 <td>
                     <button class="btn btn-primary" (click)="onEdit(user.id)">Update</button>
-                    <button class="btn btn-danger">Del</button>
+                    <button class="btn btn-danger" (click)="onDel(user.id)">Del</button>
                 </td>
             </tr>
         </tbody>

@@ -21,7 +21,8 @@ import { ProductClientComponent } from './product-client/product-client.componen
 import { AboutClientComponent } from './about-client/about-client.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component'
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { HomeClientComponent } from './home-client/home-client.component'
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     AboutClientComponent,
     ProductDetailComponent,
     ClientLayoutComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    HomeClientComponent
   ],
   imports: [
     BrowserModule,

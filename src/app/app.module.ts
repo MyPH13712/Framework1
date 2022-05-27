@@ -19,7 +19,9 @@ import { ListComponent } from './user/list/list.component';
 import { UserFormComponent } from './user/form/form.component';
 import { ProductClientComponent } from './product-client/product-client.component';
 import { AboutClientComponent } from './about-client/about-client.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component'
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component'
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     UserFormComponent,
     ProductClientComponent,
     AboutClientComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ClientLayoutComponent,
+    AdminLayoutComponent
   ],
   imports: [
     BrowserModule,

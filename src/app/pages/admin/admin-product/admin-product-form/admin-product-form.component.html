@@ -5,8 +5,10 @@
     <div class="form-group">
         <label for="">Product name</label>
         <input type="text" class="form-control" formControlName="name">
+        <span *ngIf="(productForm.get('name')?.dirty || productForm.get('name')?.touched && productForm.get('name')?.errors?.['required'])"></span>
+        <app-show-validate [field]="productForm.get('name')" key="Name Product"></app-show-validate>
     </div>
     <div>
-        <button class="btn btn-success">Submit</button>
+        <button class="btn btn-success" [disabled]="!productForm.valid">Submit</button>
     </div>
 </form>

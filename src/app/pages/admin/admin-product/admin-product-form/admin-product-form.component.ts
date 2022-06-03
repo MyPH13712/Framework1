@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-product-form',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-product-form.component.css']
 })
 export class AdminProductFormComponent implements OnInit {
+  productForm: FormGroup;
 
-  constructor() { }
+  constructor() {
+    this.productForm = new FormGroup({
+      name: new FormControl('', [
+        Validators.required,
+        Validators.minLength(6)
+      ]),
+    })
+   }
 
   ngOnInit(): void {
+  }
+  onSubmit() {
+    console.log(this.productForm.value);
+    
   }
 
 }

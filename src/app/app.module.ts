@@ -6,17 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ChampComponent } from './champ/champ.component';
-import { TableComponent } from './table/table.component';
-import { NameComponent } from './name/name.component';
-import { IdentityComponent } from './identity/identity.component';
-import { DamageComponent } from './damage/damage.component';
-import { PriceComponent } from './price/price.component';
-import { FormComponent } from './form/form.component';
 import { ShowValidateComponent } from './components/show-validate/show-validate.component';
-import { UserComponent } from './user/user.component';
-import { ListComponent } from './user/list/list.component';
-import { UserFormComponent } from './user/form/form.component';
 import { ProductClientComponent } from './product-client/product-client.component';
 import { AboutClientComponent } from './about-client/about-client.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
@@ -30,21 +20,12 @@ import { AdminProductFormComponent } from './pages/admin/admin-product/admin-pro
 import { HttpClientModule } from '@angular/common/http';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './pages/auth/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChampComponent,
-    TableComponent,
-    NameComponent,
-    IdentityComponent,
-    DamageComponent,
-    PriceComponent,
-    FormComponent,
     ShowValidateComponent,
-    UserComponent,
-    ListComponent,
-    UserFormComponent,
     ProductClientComponent,
     AboutClientComponent,
     ProductDetailComponent,
@@ -53,7 +34,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeClientComponent,
     AdminProductListComponent,
     AdminProductDetailComponent,
-    AdminProductFormComponent
+    AdminProductFormComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

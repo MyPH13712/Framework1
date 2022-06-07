@@ -32,8 +32,9 @@
                         <td>{{product._id}}</td>
                         <td>{{product.name}}</td>
                         <td>
-                            <a routerLink="/admin/products/{{product._id}}"><button class="btn btn-outline-info">Detail</button></a>
-                            <button class="btn btn-outline-danger" (click)="onDelete(product._id)">Delete</button>
+                            <a routerLink="/admin/products/{{product._id}}"><button class="btn btn-outline-info mx-2">Detail</button></a>
+                            <button class="btn btn-outline-danger mr-2" (click)="onDelete(product._id)">Delete</button>
+                            <a routerLink="/admin/products/edit/{{product._id}}"><button class="btn btn-outline-secondary">Edit</button></a>
                         </td>
                     </tr>
                 </tbody>

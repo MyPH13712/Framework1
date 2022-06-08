@@ -5,6 +5,7 @@ export type TypeLogin = {
 export type TypeLogResponse = {
     token: string,
     user: {
+        id:number
         email: string
     }
 }

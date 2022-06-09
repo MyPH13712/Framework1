@@ -1,13 +1,16 @@
 export type Product = {
     _id: number,
-    name: string
+    name: string,
+
 };
 
 export type CreatePro = {
-    name: string
+    name: string,
+
 }
 export type ProductCart = {
     _id:string, 
     name: string,
+
     value: number
 }

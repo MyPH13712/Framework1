@@ -24,6 +24,9 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>Img</th>
+                        <th>Price</th>
+                        <th>Desc</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -31,6 +34,9 @@
                     <tr *ngFor="let product of products">
                         <td>{{product._id}}</td>
                         <td>{{product.name}}</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
                         <td>
                             <a routerLink="/admin/products/{{product._id}}"><button class="btn btn-outline-info mx-2">Detail</button></a>
                             <button class="btn btn-outline-danger mr-2" (click)="onDelete(product._id)">Delete</button>

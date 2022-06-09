@@ -22,7 +22,8 @@ export class AdminProductDetailComponent implements OnInit {
     this._id = '';
     this.product = {
       _id: 0,
-      name: ''
+      name: '',
+    
     };
     this.cartValue = 1
   }

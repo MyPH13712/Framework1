@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutClientComponent } from './client/about-client/about-client.component';
+import { AboutClientComponent } from './pages/client/about-client/about-client.component';
 import { CanAccessAdminGuard } from './guards/can-access-admin.guard';
 import { HomeClientComponent } from './client/home-client/home-client.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';

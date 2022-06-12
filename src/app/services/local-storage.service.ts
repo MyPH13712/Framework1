@@ -9,6 +9,7 @@ export class LocalStorageService {
 
   constructor() { }
   private storageSubject = new Subject<string>()
+
   watchStorage(): Observable<any> {
     return this.storageSubject.asObservable()
   }
@@ -28,6 +29,11 @@ export class LocalStorageService {
 
     localStorage.setItem('cart', JSON.stringify(cartItems));
     this.storageSubject.next('');
+  }
+  removeItem(_id: string) {
+    const cartItems = this.getItem();
+    const afterCart = cartItems.filter((item: ProductCart) => item._id !== _id);
+    localStorage.setItem('cart', JSON.stringify(afterCart));
   }
 
 }

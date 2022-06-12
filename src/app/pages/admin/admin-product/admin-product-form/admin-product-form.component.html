@@ -1,14 +1,72 @@
-<div>
-    <a routerLink="/admin/products"><button class="btn btn-outline-primary">Quay lai</button></a>
+<div class="min-h-full">
+    <header class="bg-white shadow">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold text-gray-900">
+                Thêm mới sản phẩm
+            </h1>
+        </div>
+    </header>
+    <main>
+        <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+            <div class="md:grid md:grid-cols-3 md:gap-6">
+                <div class="mt-5 md:mt-0 md:col-span-2">
+                    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+                        <div class="shadow sm:rounded-md sm:overflow-hidden">
+                            <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+                                <div class="mt-1">
+                                    <label class="block text-sm font-medium text-gray-700">Danh mục</label>
+                                    <div class="">
+                                        <select id="product_categorie" name="Danh mục" class="form-control"
+                                            formControlName="category">
+                                            <option *ngFor="let cate of category" value="{{cate._id}}">{{cate.name}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mt-1">
+                                    <label class="block text-sm font-medium text-gray-700">Tên sản phẩm</label>
+                                    <input type="text"
+                                        class="mt-1 focus:ring-indigo-500  px-3 py-3 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300">
+                                    <!-- <span
+                                        *ngIf="(productForm.get('name')?.dirty || productForm.get('name')?.touched && productForm.get('name')?.errors?.['required'])"></span>
+                                    <app-show-validate [field]="productForm.get('name')" key="Name Product">
+                                    </app-show-validate> -->
+                                </div>
+                                <div class="mt-1">
+                                    <label class="block text-sm font-medium text-gray-700">Tác giả</label>
+                                    <input type="text"
+                                        class="mt-1 focus:ring-indigo-500 px-3 py-3 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 ">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700"> Ảnh </label>
+                                    <input type="file" name="filebutton" (change)="onChange($event)" class="input-file"
+                                        class="mt-1 focus:ring-indigo-500 px-3 py-3 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 ">
+                                </div>
+                                <div>
+                                    <div class="mt-1">
+                                        <label class="block text-sm font-medium text-gray-700">Giá niêm yết</label>
+                                        <input type="number" id="price" name="price"
+                                            class="mt-1 focus:ring-indigo-500 px-3 py-3 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 ">
+                                    </div>
+                                    <div class="mt-1">
+                                        <label class="block text-sm font-medium text-gray-700">Giảm giá (%)</label>
+                                        <input type="number" id="sale_price" name="sale_price"
+                                            class="mt-1 focus:ring-indigo-500 px-3 py-3 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 ">
+                                    </div>
+                                    <div class="mt-1">
+                                        <label class="block text-sm font-medium text-gray-700">Mô tả</label>
+                                        <textarea id="desc" name="desc" formControlName="desc"
+                                            class="mt-1 focus:ring-indigo-500 px-3 py-3 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 "></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                                <button class="inline-flex justify-center py-2 px-4 btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
 </div>
-<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="">Product name</label>
-        <input type="text" class="form-control" formControlName="name">
-        <span *ngIf="(productForm.get('name')?.dirty || productForm.get('name')?.touched && productForm.get('name')?.errors?.['required'])"></span>
-        <app-show-validate [field]="productForm.get('name')" key="Name Product"></app-show-validate>
-    </div>
-    <div>
-        <button class="btn btn-success" [disabled]="!productForm.valid">Submit</button>
-    </div>
-</form>

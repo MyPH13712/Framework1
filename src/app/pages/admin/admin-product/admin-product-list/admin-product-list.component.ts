@@ -23,7 +23,7 @@ export class AdminProductListComponent implements OnInit {
     })
   }
 
-  onDelete(_id: number) {
+  onDelete(_id: string) {
     const confirmDel = confirm('Do you want to delete ?');
     if (confirmDel && _id) {
       this.productService.deleteProduct(_id).subscribe((data) => {

@@ -21,7 +21,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/auth/login/login.component';
-import { CartComponent } from './components/cart/cart.component';
+import { CartComponent } from './cart/cart.component';
+import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-category-list/admin-category-list.component';
+import { AdminCategoryFormComponent } from './pages/admin/admin-category/admin-category-form/admin-category-form.component';
+import { SignupComponent } from './pages/auth/signup/signup.component';
+import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +42,12 @@ import { CartComponent } from './components/cart/cart.component';
     AdminProductDetailComponent,
     AdminProductFormComponent,
     LoginComponent,
-    CartComponent
+    CartComponent,
+    AdminCategoryListComponent,
+    AdminCategoryFormComponent,
+    SignupComponent,
+    AdminUserListComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,13 @@
 export type Product = {
-    _id: number,
+    _id: string,
+    author: string,
     name: string,
-
+    price: number,
+    img: string,
+    sale_price: number,
+    desc: string,
+    category: string,
+    status: number
 };
 
 export type CreatePro = {
@@ -9,8 +15,14 @@ export type CreatePro = {
 
 }
 export type ProductCart = {
-    _id:string, 
+    _id: string,
+    author: string,
     name: string,
-
+    price: number,
+    img: string,
+    sale_price: number,
+    desc: string,
+    category: string,
+    status: number,
     value: number
 }

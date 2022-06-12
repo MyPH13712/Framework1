@@ -11,6 +11,11 @@ import { AdminProductListComponent } from './pages/admin/admin-product/admin-pro
 import { LoginComponent } from './pages/auth/login/login.component';
 import { ProductClientComponent } from './pages/client/product-client/product-client.component';
 import { ProductDetailComponent } from './pages/client/product-detail/product-detail.component';
+import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-category-list/admin-category-list.component';
+import { AdminCategoryFormComponent } from './pages/admin/admin-category/admin-category-form/admin-category-form.component';
+import { SignupComponent } from './pages/auth/signup/signup.component';
+import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [
@@ -25,12 +30,14 @@ const routes: Routes = [
       {
         path: 'products',
         component: ProductClientComponent,
-        children: [
-          {
-            path: ':id',
-            component: ProductDetailComponent
-          }
-        ]
+      },
+      {
+        path: 'product-detail/:_id',
+        component: ProductDetailComponent
+      },
+      {
+        path: 'cart',
+        component: CartComponent
       },
       {
         path: 'about',
@@ -63,6 +70,32 @@ const routes: Routes = [
             component: AdminProductDetailComponent
           },
         ]
+      },
+      {
+        path: 'category',
+        children: [
+          {
+            path: '',
+            component:AdminCategoryListComponent
+          },
+          {
+            path: 'create',
+            component: AdminCategoryFormComponent
+          },
+          {
+            path: 'edit/:id',
+            component: AdminCategoryFormComponent
+          }
+        ]
+      },
+      {
+        path: 'users',
+        children: [
+          {
+            path: '',
+            component: AdminUserListComponent
+          }
+        ]
       }
     ]
   },
@@ -72,6 +105,10 @@ const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent
+      },
+      {
+        path: 'signup',
+        component: SignupComponent
       }
     ]
   }

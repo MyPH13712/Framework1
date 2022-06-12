@@ -1,1 +1,90 @@
-<p>product-client works!</p>
+<div class="pt-10 py-10">
+    <main class="max-w-7xl mx-auto bg-white px-4 sm:px-6 lg:px-8 ">
+        <section aria-labelledby="products-heading" class="pt-6 pb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-10">
+                <form class="hidden lg:block border-r border-gray-200 ">
+                    <h3 class="text-lg font-medium text-gray-900 space-y-4 pb-2 border-b">Danh mục</h3>
+                    <ul class=" font-medium text-gray-900 space-y-4 pb-6 pt-2" *ngFor="let cate of category">
+                        <li>
+                            <button class='select focus:outline-none focus:border-b-4 focus:border-indigo-500'
+                                (click)="onSelect(cate._id)">{{cate.name}}</button>
+                        </li>
+                    </ul>
+                </form>
+                <div class="w-screen">
+                    <div>
+                        <a routerLink=""><img class="max-w-4xl text-center pl-1"
+                                src="https://nhanam.vn/wp-content/uploads/2019/10/Banner-web-to-01-1-768x463.jpg"
+                                alt="" /></a>
+                    </div>
+                    <ul class="w-screen flex py-6 ">
+                        <li><a routerLink=""
+                                class="px-4 text-blue-800 hover:text-blue-600 border-b-2 border-blue-800">Phổ biến</a>
+                        </li>
+                        <li><a routerLink=""
+                                class="px-4 text-black hover:text-blue-600 hover:border-b-2 hover: border-blue-800">Bán
+                                chạy</a></li>
+                        <li><a routerLink=""
+                                class="px-4 text-black hover:text-blue-600 hover:border-b-2 hover: border-blue-800">Hàng
+                                mới</a></li>
+                        <li><a routerLink=""
+                                class="px-4 text-black hover:text-blue-600 hover:border-b-2 hover: border-blue-800">Giá
+                                thấp</a></li>
+                        <li><a routerLink=""
+                                class="px-4 text-black hover:text-blue-600 hover:border-b-2 hover: border-blue-800">Giá
+                                cao</a></li>
+                    </ul>
+                    <div>
+                        <div class="w-3/5 grid grid-cols-4 gap-4 pl-1">
+                            <div *ngFor="let product of products" class="px-7 py-3 border-2 hover:shadow-md">
+                                <a href="/product-detail/{{product._id}}">
+                                    <div class=""><img src="{{product.img}}" alt=""></div>
+                                    <p class="py-2 text-left text-xs">{{product.name}}</p>
+                                    <div class="box-row row">
+                                        <div class="col">
+                                            <div>
+                                                <span class="price">{{(product.price -
+                                                    product.price*(product.sale_price/100)).toLocaleString('en-US')}}
+                                                    <u>đ</u></span>
+                                                <span class="price-sale"
+                                                    *ngIf="product.sale_price != 0">-{{product.sale_price}}%</span>
+                                            </div>
+                                            <div>
+                                                <p *ngIf="product.sale_price == 0" style="color: white;">
+                                                    <del>{{product.price}}</del></p>
+                                                <p *ngIf="product.sale_price != 0"
+                                                    style="color: #38383d; font-weight: 500;">
+                                                    <del>{{product.price.toLocaleString('en-US')}}</del></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="font-bold text-left "> {{product.price}}
+                                        <span class="underline">đ</span>
+                                        <span class=""></span>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 py-6">
+                        <nav aria-label="...">
+                            <ul class="pagination">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>

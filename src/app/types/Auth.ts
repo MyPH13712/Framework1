@@ -6,6 +6,14 @@ export type TypeLogResponse = {
     token: string,
     user: {
         id:number
-        email: string
+        email: string,
+        name: string,
+        role: number
     }
+}
+export type User = {
+    _id: string,
+    name: string,
+    email: string,
+    role: number
 }

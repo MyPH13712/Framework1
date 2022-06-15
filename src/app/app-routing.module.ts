@@ -16,6 +16,7 @@ import { AdminCategoryFormComponent } from './pages/admin/admin-category/admin-c
 import { SignupComponent } from './pages/auth/signup/signup.component';
 import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component';
 import { CartComponent } from './cart/cart.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 
 const routes: Routes = [
@@ -32,12 +33,16 @@ const routes: Routes = [
         component: ProductClientComponent,
       },
       {
-        path: 'product-detail/:_id',
+        path: 'products/:_id',
+        component: ProductClientComponent,
+      },
+      {
+        path: 'product-detail/:id',
         component: ProductDetailComponent
       },
       {
         path: 'cart',
-        component: CartComponent
+        component: ShoppingCartComponent
       },
       {
         path: 'about',
@@ -76,7 +81,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component:AdminCategoryListComponent
+            component: AdminCategoryListComponent
           },
           {
             path: 'create',

@@ -40,7 +40,7 @@
                                 <a href="/product-detail/{{product._id}}">
                                     <div class=""><img src="{{product.img}}" alt=""></div>
                                     <p class="py-2 text-left text-xs">{{product.name}}</p>
-                                    <div class="box-row row">
+                                    <!-- <div class="box-row row">
                                         <div class="col">
                                             <div>
                                                 <span class="price">{{(product.price -
@@ -50,14 +50,15 @@
                                                     *ngIf="product.sale_price != 0">-{{product.sale_price}}%</span>
                                             </div>
                                             <div>
-                                                <p *ngIf="product.sale_price == 0" style="color: white;">
-                                                    <del>{{product.price}}</del></p>
-                                                <p *ngIf="product.sale_price != 0"
-                                                    style="color: #38383d; font-weight: 500;">
-                                                    <del>{{product.price.toLocaleString('en-US')}}</del></p>
+                                                <p *ngIf="product.sale_price == 0" class="text-white">
+                                                    <del>{{product.price}}</del>
+                                                </p>
+                                                <p *ngIf="product.sale_price != 0" class="text-gray font-bold">
+                                                    <del>{{product.price.toLocaleString('en-US')}}</del>
+                                                </p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <p class="font-bold text-left "> {{product.price}}
                                         <span class="underline">đ</span>
                                         <span class=""></span>
@@ -67,18 +68,20 @@
                         </div>
                     </div>
                     <div class="col-12 py-6">
-                        <nav aria-label="...">
+                        <nav aria-label="Page navigation example">
                             <ul class="pagination">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
                                 </li>
                                 <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item active">
-                                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                                </li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                 <li class="page-item">
-                                    <a class="page-link" href="#">Next</a>
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
                                 </li>
                             </ul>
                         </nav>

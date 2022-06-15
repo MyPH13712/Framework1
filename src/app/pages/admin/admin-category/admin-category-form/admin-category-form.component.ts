@@ -32,16 +32,18 @@ export class AdminCategoryFormComponent implements OnInit {
   }
   onSubmit() {
     const submitData = this.categoryForm.value;
-
-    if (this.categoryId !== '0' && this.categoryId !== undefined) {
-      return this.categoryService.updateCategory(this.categoryId, submitData).subscribe(data => {
+    console.log(submitData);
+    
+    if (this.categoryId !== '0' || this.categoryId !== undefined) {
+      return this.categoryService.createCategory(submitData).subscribe((data) => {
+  
         this.router.navigateByUrl('/admin/category');
-      });
+      })
+      
 
     }
-    return this.categoryService.createCategory(submitData).subscribe((data) => {
-  
+    return this.categoryService.updateCategory(this.categoryId, submitData).subscribe(data => {
       this.router.navigateByUrl('/admin/category');
-    })
+    });
   }
 }

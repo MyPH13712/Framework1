@@ -25,32 +25,30 @@
                                 </div>
                                 <div class="mt-1">
                                     <label class="block text-sm font-medium text-gray-700">Tên sản phẩm</label>
-                                    <input type="text"
+                                    <input type="text" id="pro_name" name="pro_name" formControlName="name" required=""
                                         class="mt-1 focus:ring-indigo-500  px-3 py-3 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300">
-                                    <!-- <span
-                                        *ngIf="(productForm.get('name')?.dirty || productForm.get('name')?.touched && productForm.get('name')?.errors?.['required'])"></span>
-                                    <app-show-validate [field]="productForm.get('name')" key="Name Product">
-                                    </app-show-validate> -->
                                 </div>
                                 <div class="mt-1">
                                     <label class="block text-sm font-medium text-gray-700">Tác giả</label>
-                                    <input type="text"
+                                    <input type="text" id="author" name="author"  formControlName="author" required=""
                                         class="mt-1 focus:ring-indigo-500 px-3 py-3 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 ">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700"> Ảnh </label>
-                                    <input type="file" name="filebutton" (change)="onChange($event)" class="input-file"
+                                    <input type="file" name="filebutton" (change)="onChange($event)" class="input-file" required=""
+                                        formControlName="image"
                                         class="mt-1 focus:ring-indigo-500 px-3 py-3 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 ">
                                 </div>
                                 <div>
                                     <div class="mt-1">
                                         <label class="block text-sm font-medium text-gray-700">Giá niêm yết</label>
-                                        <input type="number" id="price" name="price"
+                                        <input type="number" id="price" name="price" formControlName="price"
                                             class="mt-1 focus:ring-indigo-500 px-3 py-3 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 ">
                                     </div>
                                     <div class="mt-1">
                                         <label class="block text-sm font-medium text-gray-700">Giảm giá (%)</label>
                                         <input type="number" id="sale_price" name="sale_price"
+                                            formControlName="sale_price"
                                             class="mt-1 focus:ring-indigo-500 px-3 py-3 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 ">
                                     </div>
                                     <div class="mt-1">

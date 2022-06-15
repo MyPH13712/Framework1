@@ -20,13 +20,14 @@
             <div class="text-end" *ngIf="loggedInUser">
                 <a routerLink="/cart"><button type="button" class="btn btn-outline-secondary me-2">Cart <app-cart>
                         </app-cart></button></a>
-                <button type="button" class="btn btn-outline-danger" (click)="logout()">Sign-out</button>
-            </div>
-            <div class="text-end" *ngIf="!loggedInUser">
 
+            </div>
+
+            <div class="text-end" *ngIf="!loggedInUser">
                 <a routerLink="/auth/login"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
                 <a routerLink="/auth/signup"><button type="button"
                         class="btn btn-outline-warning me-2">Sign-up</button></a>
+                <button type="button" class="btn btn-outline-danger me-2" (click)="logout()">Sign-out</button>
                 <a routerLink="/cart"><button type="button" class="btn btn-outline-secondary me-2">Cart <app-cart>
                         </app-cart></button></a>
             </div>

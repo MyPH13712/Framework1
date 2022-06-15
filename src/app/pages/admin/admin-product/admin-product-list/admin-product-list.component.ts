@@ -9,13 +9,30 @@ import { ProductService } from '../../../../services/product.service';
 })
 export class AdminProductListComponent implements OnInit {
   products: Product[];
+  product: Product;
+  _id: string;
 
   constructor(private productService: ProductService) {
-    this.products = []
+    this.product = {
+      _id: "",
+      author: "",
+      name: "",
+      price: 0,
+      img: "",
+      sale_price: 0,
+      desc: "",
+      category: "",
+      status: 0
+    }
+    this.products = [];
+    this._id = ''
   }
 
   ngOnInit(): void {
-    this.onGetList()
+    this.productService.getProducts().subscribe((data) => {
+      this.products = data;
+    })
+    console.log(this.products);
   }
   onGetList() {
     this.productService.getProducts().subscribe((data) => {
@@ -32,5 +49,4 @@ export class AdminProductListComponent implements OnInit {
       })
     }
   }
-
 }

@@ -45,7 +45,7 @@ export class ProductClientComponent implements OnInit {
   }
   onSelect(_id: string) {
     this.onListCate(_id),
-      this.router.navigateByUrl(`/product/${_id}`)
+      this.router.navigateByUrl(`/products/${_id}`)
   }
  
 }

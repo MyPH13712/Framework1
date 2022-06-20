@@ -8,9 +8,9 @@
             </div>
             <div class="mt-5 flex lg:mt-0 lg:ml-4">
                 <a routerLink="/admin/products/create" class="sm:ml-3">
-                <button type="button" class=" flex items-center justify-center px-3 py-2 btn btn-outline-primary">
-                    Thêm bài viết
-                </button>
+                    <button type="button" class=" flex items-center justify-center px-3 py-2 btn btn-outline-primary">
+                        Thêm bài viết
+                    </button>
                 </a>
             </div>
         </div>
@@ -38,13 +38,15 @@
                         <td>{{product.price}}</td>
                         <td>{{product.desc}}</td>
                         <td>
-                            <a routerLink="/admin/products/{{product._id}}"><button class="btn btn-outline-info mx-2">Detail</button></a>
+                            <a routerLink="/admin/products/{{product._id}}"><button
+                                    class="btn btn-outline-info mx-2">Detail</button></a>
                             <button class="btn btn-outline-danger mr-2" (click)="onDelete(product._id)">Delete</button>
-                            <a routerLink="/admin/products/edit/{{product._id}}"><button class="btn btn-outline-secondary">Edit</button></a>
+                            <a routerLink="/admin/products/edit/{{product._id}}"><button
+                                    class="btn btn-outline-secondary">Edit</button></a>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    </main>
+</main>

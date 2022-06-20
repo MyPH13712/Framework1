@@ -32,11 +32,13 @@ export class ProductClientComponent implements OnInit {
     this.productService.getProducts().subscribe((data) => {
       this.products = data;
     })
-    this._id = this.activateRoute.snapshot.params['_id']
-    this.productService.getProductFilter(this._id).subscribe((data) => {
-      this.products = data;
-      console.log(this.products);
-    })
+    // this._id = this.activateRoute.snapshot.params['_id']
+    // console.log(this._id);
+    
+    // this.productService.getProductFilter(this._id).subscribe((data) => {
+    //   this.products = data;
+    //   console.log(this.products);
+    // })
   }
   onListCate(_id: string) {
     this.productService.getProductFilter(_id).subscribe((data) => {

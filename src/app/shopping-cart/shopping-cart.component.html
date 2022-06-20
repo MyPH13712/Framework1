@@ -4,11 +4,13 @@
         <div class="col-md-9 cart">
             <div class="title">
                 <div class="row">
-                    <div class="col"><h4><b>Giỏ hàng</b></h4></div>
+                    <div class="col">
+                        <h4><b>Giỏ hàng</b></h4>
+                    </div>
                     <div class="col align-self-center text-right text-muted">{{cartItems.length}} sản phẩm</div>
                 </div>
-            </div>    
-            <div class="row" style="text-align: center;">
+            </div>
+            <div class="row text-center">
                 <div class="col col-title">Ảnh</div>
                 <div class="col col-title">Tên sản phẩm</div>
                 <div class="col col-title">Số lượng</div>
@@ -17,7 +19,7 @@
                 <div class="col col-title">Xóa</div>
             </div>
 
-            <div class="row border-top border-bottom" style="text-align: center;" *ngFor="let product of cartItems">
+            <div class="row border-top border-bottom text-center" *ngFor="let product of cartItems">
                 <div class="row main align-items-center">
                     <div class="col-2"><img class="img-fluid" src={{product.img}}></div>
                     <div class="col">
@@ -25,27 +27,32 @@
                         <div class="row">{{product.author}}</div>
                     </div>
                     <div class="col">
-                        <a href="#">-</a><a href="#" class="border">{{product.value}}</a><a href="#">+</a>
+                        <button class="border" (click)="down(product._id)">-</button>
+                        <button class="border">{{product.value}}</button>
+                        <button class="border" (click)="up(product._id)">+</button>
                     </div>
-                    <div class="col">{{(product.price - product.price*product.sale_price/100).toLocaleString('en-US')}}</div>
-                    <div class="col">{{((product.price - product.price*product.sale_price/100) * product.value).toLocaleString('en-US')}}</div>
-                    <div class="col"><button style="border: none; background-color: rgb(253, 68, 68); color: white; border-radius: 5px">X</button></div>
+                    <div class="col">{{product.price}}</div>
+
+                   
+                    <div class="col"><button (click)="onRemove(product._id)">X</button></div>
                 </div>
             </div>
 
-
-            <div class="back-to-shop"><a routerLink="/products">&leftarrow; <span class="text-muted">Tiếp tục mua sắm</span></a></div>
+            <div class="back-to-shop"><a routerLink="/products">&leftarrow; <span class="text-muted">Tiếp tục mua
+                        sắm</span></a></div>
         </div>
         <div class="col-md-3 summary">
-            <div><h5><b>Hóa đơn</b></h5></div>
+            <div>
+                <h5><b>Hóa đơn</b></h5>
+            </div>
             <hr>
             <br>
             <div class="row">
-                <div class="col pl-0" >Sản phẩm {{cartItems.length}}</div>
+                <div class="col pl-0">Sản phẩm {{cartItems.length}}</div>
                 <div class="col text-right">{{cartTotal}} (đ)</div>
             </div>
             <br>
-            <div class="row " >
+            <div class="row ">
                 <div class="col">Tổng giá</div>
                 <div class="col text-right">{{cartTotal}} (đ)</div>
             </div>

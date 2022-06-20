@@ -67,7 +67,7 @@ const routes: Routes = [
             component: AdminProductFormComponent
           },
           {
-            path: 'edit/:id',
+            path: 'edit/:_id',
             component: AdminProductFormComponent
           },
           {

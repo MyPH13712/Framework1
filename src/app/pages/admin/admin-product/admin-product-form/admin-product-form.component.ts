@@ -96,14 +96,9 @@ export class AdminProductFormComponent implements OnInit {
     } else {
       submitData.image = this.img
     }
-    console.log(submitData.image);
+    console.log(submitData);
 
-    if (this.productId !== '0' && this.productId !== undefined) {
-      return this.productService.updateProduct(this.productId, submitData).subscribe(data => {
-        this.router.navigateByUrl('/admin/products');
-      });
-    }
-    return this.productService.createProduct(submitData).subscribe((data) => {
+    this.productService.createProduct(submitData).subscribe((data) => {
       this.router.navigateByUrl('/admin/products');
     })
   }

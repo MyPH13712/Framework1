@@ -26,7 +26,6 @@ export class LocalStorageService {
     } else {
       existItem.value += addItem.value;
     }
-
     localStorage.setItem('cart', JSON.stringify(cartItems));
     this.storageSubject.next('');
   }
@@ -34,6 +33,25 @@ export class LocalStorageService {
     const cartItems = this.getItem();
     const afterCart = cartItems.filter((item: ProductCart) => item._id !== _id);
     localStorage.setItem('cart', JSON.stringify(afterCart));
+  }
+  decreaseQuantity(_id: string) {
+    var cartItems = this.getItem();
+    const currentProduct = cartItems.find((item: ProductCart) => item._id === _id);
+    currentProduct.value--;
+    if (currentProduct.value < 1) {
+      const confirm = window.confirm("Bạn có muốn xóa sản phẩm không?");
+      if (confirm) {
+        cartItems = cartItems.filter((item: ProductCart) => item._id !== _id);
+      }
+    }
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    this.storageSubject.next('');
+  }
+  increaseQuantity(_id: string) {
+    var cartItems = this.getItem();
+    cartItems.find((item: ProductCart) => item._id === _id).value++;
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    this.storageSubject.next('');
   }
 
 }
